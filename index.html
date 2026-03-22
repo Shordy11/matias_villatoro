@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recetas Divertidas 🍓👩‍🍳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    }
+
+    header {
+      background: #ff6f61;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .btn {
+      background: #ff6f61;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .video-section {
+      text-align: center;
+      padding: 30px;
+    }
+
+    iframe {
+      border-radius: 15px;
+      width: 90%;
+      height: 400px;
+      max-width: 800px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #ff6f61;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  🍭 Recetas Divertidas para Niños 🍕
+</header>
+
+<section class="video-section">
+  <h2>🎥 Mira esta receta increíble</h2>
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+</section>
+
+<section class="container">
+  <div class="card">
+    <img src="https://source.unsplash.com/300x200/?pancakes" alt="Panqueques">
+    <div class="card-content">
+      <h3>🥞 Panqueques mágicos</h3>
+      <button class="btn" onclick="mostrarReceta('panqueques')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://source.unsplash.com/300x200/?pizza" alt="Pizza">
+    <div class="card-content">
+      <h3>🍕 Mini pizzas</h3>
+      <button class="btn" onclick="mostrarReceta('pizza')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://source.unsplash.com/300x200/?fruit" alt="Fruta">
+    <div class="card-content">
+      <h3>🍓 Brochetas de fruta</h3>
+      <button class="btn" onclick="mostrarReceta('fruta')">Ver receta</button>
+    </div>
+  </div>
+</section>
+
+<script>
+  function mostrarReceta(tipo) {
+    let mensaje = '';
+
+    if (tipo === 'panqueques') {
+      mensaje = 'Mezcla harina, leche y huevo. Cocina en sartén y ¡listo!';
+    } else if (tipo === 'pizza') {
+      mensaje = 'Usa pan como base, agrega salsa, queso y hornea.';
+    } else if (tipo === 'fruta') {
+      mensaje = 'Corta frutas y colócalas en palitos como brochetas.';
+    }
+
+    alert('🍽️ Receta:\n' + mensaje);
+  }
+</script>
+
+<footer>
+  Hecho con ❤️ para pequeños chefs
+</footer>
+
+</body>
+</html>
